@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Test",
+    "url": "https://google.com",
+    "timeout": 30000,
+    "wait": 0,
+    "standard": "WCAG2AA",
+    "ignore": [],
+    "actions": []
+  }
+]

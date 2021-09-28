@@ -1,0 +1,54 @@
+{
+  "name": "pa11y-cli",
+  "version": "2.0.0",
+  "description": "Pa11y-CLI tool for running Pa11y ADA compliance scans via command line interface",
+  "main": "./bin/index.js",
+  "bin": {
+    "pa11y-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "runner": "node ./InitRunner.js",
+    "sync": "node sync.js"
+  },
+  "contributors": [
+    "Devin Hill",
+    "Carl Burnstein"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "graceful-fs": "^4.2.6",
+    "https": "^1.0.0",
+    "jest": "^26.6.3",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1",
+    "pa11y": "",
+    "pa11y-reporter-html": "^2.0.0",
+    "shelljs": "^0.8.4",
+    "yargs": "^17.0.1"
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "**/TasksHelper.js",
+      "**/Runner.js",
+      "**/DbConnection.js",
+      "**/Pa11yCli.js",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/tasks/**",
+      "!**/images/**"
+    ],
+    "maxConcurrency": 10,
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "puppeteer": "^9.1.1"
+  }
+}
